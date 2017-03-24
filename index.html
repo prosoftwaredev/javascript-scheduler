@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Scheduler</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+	<!-- include vendor css -->
+	<link rel="stylesheet" type="text/css" href="http://getbootstrap.com/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/slider.css">
+
+	<!-- include custom css -->
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4">
+			<!-- part of initial values -->
+				<div class="row">
+					<div class="new-to-the-UAP title col-xs-5">I am new to the programming </div>
+					<div class="col-xs-7">
+						<input type="checkbox" name="" id="new_to_the_UAP" checked="checked">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-5 dateStart">start training </div>
+					<div class="col-xs-7">
+						<input type="" name="" id="dateStart">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-5 dateSeasonPeak">Peak event </div>
+					<div class="col-xs-7">
+						<input type="" name="" id="dateSeasonPeak">
+					</div>
+				</div>
+				<div class="row">
+					<div class="warning col-sm-12">
+						The UAP needs a minimum of 18 weeks and maximum of 52 weeks, please adjust your dates again.
+					</div>
+				</div>
+				<!-- part of schedule list -->
+				<div class="schedule-result row">
+					<div class="is-adjusted-start-date col-sm-5 col-xs-4">
+						<span>(adjusted start date)</span>
+					</div>
+					<div class="show-date col-sm-3 col-xs-4"></div>
+					<div class="show-data col-sm-4 col-xs-4">
+						<div class="slider-limit-container">
+							<div class="slider-limit clearfix"></div>
+						</div>
+					</div>
+				</div>
+				<div class="data-slider row" >
+					<div class="col-xs-9 col-xs-offset-3 col-sm-8 col-sm-offset-4">
+						<input id="slider" data-slider-id='ex1Slider' type="text" data-min="1" data-max="2" data-step="1" data-value="1"/>
+					</div>
+				</div>
+				<div class="season_text row">
+					<div class="col-xs-9 col-xs-offset-3 col-sm-8 col-sm-offset-4">
+						<span class="pull-left">More Off-season</span>
+						<span class="pull-right">More In-season</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- include js -->
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+	<script src="assets/js/bootstrap-slider.js"></script>
+
+  	<script>
+	  	$( function() {
+	  		var start_default = new Date();
+	  		var season_default = new Date();
+	  		season_default.setDate(start_default.getDate() + 154);
+	  		$( "#dateStart" ).datepicker({
+				dateFormat: 'dd/mm/yy'
+			});
+	    	$( "#dateStart" ).datepicker('setDate', start_default);
+	    	$( "#dateSeasonPeak " ).datepicker({
+				dateFormat: 'dd/mm/yy'
+			});
+	    	$( "#dateSeasonPeak" ).datepicker('setDate', season_default);
+	  	} );
+  	</script>
+
+  	<!-- include custom js -->
+  	<script src="assets/js/scheduler.js"></script>
+	
+</body>
+</html>

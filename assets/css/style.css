@@ -1,0 +1,120 @@
+body{
+	font-size: 30px;
+	font-size: 1em;
+    font-weight: bold;
+    font-family: sans-serif;
+    padding-top: 30px;
+}
+.row {
+	padding: 5px 0;
+}
+#new_to_the_UAP {
+    height: 25px;
+    width: 25px;
+}
+.new-to-the-UAP, .dateStart, .dateSeasonPeak {
+	text-align: right;
+}
+#dateStart, #dateSeasonPeak {
+	float: left;
+	border-radius: 16px;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 130px;
+}
+
+.show-date {
+	float: left;
+}
+
+.slider-limit-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.slider-limit {
+    position: relative;
+}
+
+.is-adjusted-start-date {
+	float: left;
+	text-align: right;
+}
+
+.is-adjusted-start-date span {
+    display: none;
+}
+
+input#new_to_the_UAP {
+	margin-top: 0;
+	position: relative;
+}
+
+.warning {
+    color: white;
+    padding: 15px;
+}
+
+.error {
+    background-color: #f2dede;
+    border: solid 1px #ebcccc;
+    color: #a94442;
+}
+
+.preparation {
+    background-color: #86e1fb;
+}
+
+.off-season {
+    background-color: #3466d1;
+}
+
+.pre-season {
+    background-color: #ec9226;
+}
+
+.in-season {
+    background-color: #f3ef94;
+}
+
+.taper {
+    background-color: #85b3fb;
+}
+
+.option div
+, .show-date div {
+    white-space: nowrap;
+}
+
+#slider .slider-track-high
+, #slider .slider-track-low {
+    background: transparent;
+}
+
+.season_text .pull-left {
+    margin-left: -10px;
+}
+.season_text .pull-right {
+    margin-right: -10px;
+}
+
+@media (min-width: 900px) {
+    .season_text .pull-left {
+        margin-left: -70px;
+    }
+    .season_text .pull-right {
+        margin-right: -70px;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 400px) {
+    body {
+        font-size: 12px;
+    }
+}
